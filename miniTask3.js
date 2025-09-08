@@ -1,7 +1,7 @@
 function wait(str, time) {
   return new Promise((resolve, reject) => {
-    if (typeof str === "number") {
-      reject("err: type data bukan number tapi string");
+    if (typeof str !== "string") {
+      reject("err: harus string kak");
     } else {
       setTimeout(() => {
         resolve(str);
@@ -10,18 +10,18 @@ function wait(str, time) {
   });
 }
 
-// async function callName() {
-//   try {
-//     const sapa1 = await wait("jhon", 1500);
-//     console.log(sapa1);
-//     const sapa2 = await wait("ed", 2000);
-//     console.log(sapa2);
-//     const sapa3 = await wait("jane", 500);
-//     console.log(sapa3);
-//   } catch (err) {
-//     console.log("err: num = salah brok");
-//   }
-// }
+async function callName() {
+  try {
+    const sapa1 = await wait("jhon", 1500);
+    console.log(sapa1);
+    const sapa2 = await wait("ed", 2000);
+    console.log(sapa2);
+    const sapa3 = await wait("jane", 500);
+    console.log(sapa3);
+  } catch (err) {
+    console.log("err: num = salah brok");
+  }
+}
 
 function callName() {
   wait("jhon", 1500).then((str) => {
