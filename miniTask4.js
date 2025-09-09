@@ -106,7 +106,7 @@ function getDataAll() {
     .then((ress) => ress.json())
     .then((data) => console.log(data))
     .catch((error) => {
-      console.log(error + "Error : Gagal Mengambil Data");
+      console.log(error + "Error : Gagal Mengambil Data");  
     });
 }
 
